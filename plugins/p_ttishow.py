@@ -140,7 +140,7 @@ async def re_enable_chat(bot, message):
 async def get_ststs(bot, message):
     rju = await message.reply('Fetching stats..')
     total_users = await db.total_users_count()
-    totl_chats = await db.total_chat_count()
+    total_chats = await db.total_chats_count()
     files = await Media.count_documents()
     size = await db.get_db_size()
     free = 536870912 - size
